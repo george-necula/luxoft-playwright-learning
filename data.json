@@ -1,0 +1,59 @@
+{
+  "text_box": {
+    "url": "https://demoqa.com/text-box",
+    "values": [
+      {
+        "full_name": "Full Name",
+        "email": "name@example.com",
+        "current_address": "210-8377 Interdum. St.",
+        "perm_adrress": "Ap #227-5804 Nibh Ave"
+      },
+      {
+        "full_name": "Full Name 2",
+        "email": "name2@example.com",
+        "current_address": "210-8377 Interdum. St. part 2",
+        "perm_adrress": "Ap #227-5804 Nibh Ave part2"
+      }
+    ]
+  },
+  "radio_button": {
+    "url": "https://demoqa.com/radio-button",
+    "values": [
+      {
+        "answer": "Yes"
+      },
+      {
+        "answer": "Impressive"
+      }
+    ]
+  },
+  "web_tables": {
+    "url": "https://demoqa.com/webtables",
+    "values": [
+      {
+        "firstName": "Sheldon",
+        "lastName": "Quigley",
+        "email": "atuny0@sohu.com",
+        "age": 28,
+        "salary": 20000,
+        "department": "sales"
+      },
+      {
+        "firstName": "Terry",
+        "lastName": "Medhurst",
+        "email": "hbingley1@plala.or.jp",
+        "age": 50,
+        "salary": 40000,
+        "department": "still_sales"
+      },
+      {
+        "firstName": "Terrill",
+        "lastName": "Hills",
+        "email": "rshawe2@51.la",
+        "age": 38,
+        "salary": 69420,
+        "department": "cool_dep"
+      }
+    ]
+  }
+}
