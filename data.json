@@ -34,24 +34,24 @@
         "firstName": "Sheldon",
         "lastName": "Quigley",
         "email": "atuny0@sohu.com",
-        "age": 28,
-        "salary": 20000,
+        "age": "28",
+        "salary": "20000",
         "department": "sales"
       },
       {
         "firstName": "Terry",
         "lastName": "Medhurst",
         "email": "hbingley1@plala.or.jp",
-        "age": 50,
-        "salary": 40000,
+        "age": "50",
+        "salary": "40000",
         "department": "still_sales"
       },
       {
         "firstName": "Terrill",
         "lastName": "Hills",
         "email": "rshawe2@51.la",
-        "age": 38,
-        "salary": 69420,
+        "age": "38",
+        "salary": "69420",
         "department": "cool_dep"
       }
     ]
