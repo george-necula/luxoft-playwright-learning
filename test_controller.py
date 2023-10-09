@@ -4,7 +4,9 @@ import requests
 
 from test_broken_links_images import broken_links_images
 from test_buttons import buttons
+from test_dynamic_props import dynamic_props
 from test_links import links
+from test_upload_download import upload_download
 from test_web_tables import web_tables
 from text_box import text_box
 from test_radio_button import radio_button
@@ -33,12 +35,17 @@ class TestController:
     def test_broken_links_images(self, page: Page):
         broken_links_images(page)
 
-    @pytest.mark.xfail
+    # @pytest.mark.xfail
     def test_links(self, page: Page, assert_snapshot, context):
         links(page, assert_snapshot, context)
 
+    def test_upload_download(self, page: Page):
+        upload_download(page)
+        
+    def test_dynamic_props(self, page: Page):
+        dynamic_props(page)
+
     def test_nimic(self, page: Page, assert_snapshot, context):
-        page.goto('https://demoqa.com/broken')
-        print(requests.get(url='https://demoqa.com/images/Toolsqa.jpg', verify=False))
+        page.goto('https://demoqa.com/dynamic-properties')
 
         print()
