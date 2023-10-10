@@ -5,6 +5,7 @@ import requests
 from test_broken_links_images import broken_links_images
 from test_buttons import buttons
 from test_dynamic_props import dynamic_props
+from test_form import forms
 from test_links import links
 from test_upload_download import upload_download
 from test_web_tables import web_tables
@@ -41,10 +42,14 @@ class TestController:
 
     def test_upload_download(self, page: Page):
         upload_download(page)
-        
+
     def test_dynamic_props(self, page: Page):
         dynamic_props(page)
 
+    def test_forms(self, page: Page, assert_snapshot):
+        forms(page, assert_snapshot)
+
+    @pytest.mark.skip
     def test_nimic(self, page: Page, assert_snapshot, context):
         page.goto('https://demoqa.com/dynamic-properties')
 
