@@ -1,10 +1,10 @@
 from playwright.sync_api import Page
 
 
-def web_tables(page: Page, data):
-    page.goto(data['url'])
+def test_web_tables(page: Page, data):
+    page.goto(data['web_tables']['url'])
 
-    for value in data['values']:
+    for value in data['web_tables']['values']:
         page.locator('button#addNewRecordButton').click()
         page.locator('input#firstName').fill(value['firstName'])
         page.locator('input#lastName').fill(value['lastName'])

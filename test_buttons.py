@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 
 
-def buttons(page: Page):
+def test_buttons(page: Page):
     page.goto('https://demoqa.com/buttons')
 
     page.locator('button#doubleClickBtn').dblclick()

@@ -2,7 +2,7 @@ from playwright.sync_api import Page
 import requests
 
 
-def broken_links_images(page: Page):
+def test_broken_links_images(page: Page):
     page.goto('https://demoqa.com/broken')
 
     img_tags = page.locator('div.row > div:nth-child(2) > div:nth-child(2) > img').all()

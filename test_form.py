@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 
 
-def forms(page: Page, assert_snapshot):
+def test_forms(page: Page, assert_snapshot):
     page.goto('https://demoqa.com/automation-practice-form')
 
     page.get_by_placeholder('First name').fill('altceva')

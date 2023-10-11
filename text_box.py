@@ -1,9 +1,9 @@
 from playwright.sync_api import Page
 
 
-def text_box(page: Page, data):
-    page.goto(data['url'])
-    for value in data['values']:
+def test_text_box(page: Page, data):
+    page.goto(data['text_box']['url'])
+    for value in data['text_box']['values']:
         page.locator('input#userName').fill(value['full_name'])
         page.locator('input#userEmail').fill(value['email'])
         page.locator('textarea#currentAddress').fill(value['current_address'])

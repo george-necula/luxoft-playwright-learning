@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 
 
-def links(page: Page, assert_snapshot, context):
+def test_links(page: Page, assert_snapshot, context):
     page.goto('https://demoqa.com/links')
 
     with context.expect_page() as new_page_info:

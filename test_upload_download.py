@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 
 
-def upload_download(page: Page):
+def test_upload_download(page: Page):
     page.goto('https://demoqa.com/upload-download')
 
     with page.expect_download() as download_info:

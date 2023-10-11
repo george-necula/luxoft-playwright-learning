@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 
 
-def dynamic_props(page: Page):
+def test_dynamic_props(page: Page):
     page.goto('https://demoqa.com/dynamic-properties')
 
     first_p = page.locator('div.row > div:nth-child(2) > div:nth-child(2) > p').first
