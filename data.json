@@ -55,5 +55,37 @@
         "department": "cool_dep"
       }
     ]
+  },
+  "form": {
+    "url": "https://demoqa.com/automation-practice-form",
+    "values": [
+      {
+        "first name": "Terrill",
+        "last name": "Hills",
+        "student email": "atuny0@sohu.com",
+        "gender": "Male",
+        "mobile": "1234567890",
+        "date of birth": "10 October,2020"
+      },
+      {
+        "first name": "Terrill",
+        "last name": "Hills",
+        "student email": "atuny0@sohu.com",
+        "gender": "Female",
+        "mobile": "1234567890",
+        "date of birth": "10 October,2020",
+        "hobbies": [
+          "reading"
+        ],
+        "picture": "screenshot_original.jpg",
+        "subjects": [
+          "physics",
+          "computer science"
+        ],
+        "address": "ceva adresa",
+        "state": "NCR",
+        "city": "Delhi"
+      }
+    ]
   }
 }
