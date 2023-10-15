@@ -60,12 +60,26 @@
     "url": "https://demoqa.com/automation-practice-form",
     "values": [
       {
-        "first name": "Terrill",
-        "last name": "Hills",
-        "student email": "atuny0@sohu.com",
+        "name": [
+          "Terrill",
+          "Hills"
+        ],
+        "email": "atuny0@sohu.com",
         "gender": "Male",
         "mobile": "1234567890",
-        "date of birth": "10 October,2020"
+        "picture": "screenshot_original.jpg",
+        "date of birth": "10 October,2020",
+        "subjects": [
+          "physics",
+          "computer science"
+        ],
+        "hobbies": [
+          "reading"
+        ],
+        "state and city": [
+          "NCR",
+          "Delhi"
+        ]
       },
       {
         "first name": "Terrill",
