@@ -11,13 +11,15 @@ def collect_data(page: Page):
         if not value:
             continue
         if key == 'Student Name':
-            return_data['first name'], return_data['last name'] = value.split(' ')
+            return_data['name'] = value.split(' ')
+        elif key == 'Student Email':
+            return_data['email'] = value
         elif key == 'Subjects':
             return_data['subjects'] = [subject.strip().lower() for subject in value.split(',')]
         elif key == 'Hobbies':
             return_data['hobbies'] = [hobby.lower() for hobby in value.split(' ')]
         elif key == 'State and City':
-            return_data['state'], return_data['city'] = value.split(' ')
+            return_data['state and city'] = value.split(' ')
         else:
             return_data[key.lower()] = value
     return return_data

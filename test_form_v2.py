@@ -1,8 +1,7 @@
 from playwright.sync_api import Locator, Page
 import re
+from test_form import collect_data
 
-
-# cate o functie pentru fiecare tip de field gasit
 
 def fill_in_input_field(page, values: str | list, row: Locator) -> None:
     if row.locator('input').count() == 2:
@@ -43,11 +42,9 @@ def fill_in_subjects_or_state_field(page, values: list, row: Locator) -> None:
             row.locator('input').fill(subject)
             page.keyboard.press('Enter', delay=10)
     else:
-        row.locator('div:has(input)').all()[0].click()
-        row.locator(f'div:text-matches("^{values[0]}$","i")').first.click()
-
-        row.locator('div:has(input)').all()[1].click()
-        row.locator(f'div:text-matches("^{values[1]}$","i")').first.click()
+        for index in range(row.locator('input').count()):
+            row.locator('input').all()[index].fill(values[index])
+            page.keyboard.press('Enter', delay=10)
 
 
 def get_property_row_by_label(page: Page, label: str) -> Locator:
@@ -79,9 +76,11 @@ def fill_in_form(page, property_dict: dict) -> None:
 
 # propertys_dict: {"label din ui": value}
 
-def test_test(page, data):
+def test_form(page, data):
     page.goto('https://demoqa.com/automation-practice-form')
-
-    fill_in_form(page, data['form']['values'][0])
-
+    current_data = data['form']['values'][0]
+    fill_in_form(page, current_data)
+    page.evaluate('document.getElementById("submit").click()')
+    collected = collect_data(page)
+    assert collected == current_data
     print()
